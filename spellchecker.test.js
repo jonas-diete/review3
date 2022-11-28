@@ -20,4 +20,12 @@ describe('Spellchecker', () => {
   it('returns correct and misspelt word ~', () => {
     expect(spellcheck('hello worbd')).toBe('hello ~worbd~');
   })
+
+  it('returns correct and misspelt word ~', () => {
+    expect(spellcheck("these words are spnelt correclty")).toBe("these words are ~spnelt~ ~correclty~");
+  })
+
+  it('returns word with capital letters correctly', () => {
+    expect(spellcheck("Hello")).toBe("Hello");
+  })
 })
